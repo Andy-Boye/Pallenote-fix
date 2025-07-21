@@ -1,11 +1,5 @@
-/**
- * Metro configuration for React Native
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
-const { getDefaultConfig } = require("@react-native/metro-config");
+// metro.config.js
+const { getDefaultConfig } = require("@expo/metro-config");
 
 const config = getDefaultConfig(__dirname);
 

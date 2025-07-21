@@ -186,7 +186,17 @@ const OnboardingScreen = () => {
 
       {/* Bottom Button */}
       <TouchableOpacity
-        style={[styles.nextButton, { backgroundColor: colors.primary }]}
+        style={[
+          styles.nextButton,
+          {
+            backgroundColor: colors.primary,
+            position: "absolute",
+            bottom: 40,
+            left: 40,
+            right: 40,
+            zIndex: 10,
+          },
+        ]}
         onPress={handleNext}
       >
         <Text style={styles.nextText}>
@@ -228,16 +238,16 @@ const styles = StyleSheet.create({
     textAlign: "center",
     lineHeight: 24,
   },
- topButtons: {
-  ...StyleSheet.absoluteFillObject,
-  flexDirection: "row",
-  justifyContent: "space-between",
-  alignItems: "flex-start",
-  paddingHorizontal: 20,
-  paddingTop: Platform.OS === "android" ? 20 : 50,
-  zIndex: 10,
-  pointerEvents: "box-none",  // <--- Add this line
-},
+  topButtons: {
+    ...StyleSheet.absoluteFillObject,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    paddingHorizontal: 20,
+    paddingTop: Platform.OS === "android" ? 20 : 50,
+    zIndex: 10,
+    pointerEvents: "box-none",
+  },
   topLeft: {
     padding: 10,
   },
@@ -263,8 +273,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    marginHorizontal: 40,
-    marginBottom: 40,
     paddingVertical: 16,
     borderRadius: 12,
   },

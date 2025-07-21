@@ -29,7 +29,6 @@
       "bundler": "metro"
     },
     "plugins": [
-      "expo-audio",
       [
         "expo-av",
         {
